@@ -1,11 +1,15 @@
 package com.example.demo.model;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -21,6 +25,9 @@ public class Member {
 	private String memberPhone;
 	private String email;
 	
+	@OneToMany
+	@JoinColumn(name = "MemberID")
+	private List<Mycourse> mycourses;
 	
 
 	public Integer getId() {

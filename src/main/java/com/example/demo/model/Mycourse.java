@@ -1,14 +1,8 @@
 package com.example.demo.model;
 
-import org.springframework.boot.context.properties.bind.Name;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
 
 @Entity
 @Table(name = "mycrouse")
@@ -20,9 +14,9 @@ public class Mycourse {
 	private Integer memberID;
 	private String memberName;
 	private String courseName;
-	
-	
-	
+
+
+	    
 	public String getName() {
 		return name;
 	}

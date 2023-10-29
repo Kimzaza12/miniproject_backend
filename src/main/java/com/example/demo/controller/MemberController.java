@@ -84,8 +84,6 @@ public class MemberController {
 			 	
 			if (member.isPresent()) {
 				member.get().setMemberName(body.getMemberName());
-				member.get().setMemberLastname(body.getMemberLastname());
-				member.get().setMemberPhone(body.getMemberPhone());
 				member.get().setEmail(body.getEmail());
 				
 				memberRepository.save(member.get());
